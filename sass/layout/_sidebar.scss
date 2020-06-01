@@ -1,0 +1,124 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-grey-dark-1);
+    // background-color: #fff;
+    flex: 0 0 12%;
+    transition: all .1s;
+    width: 0;
+    overflow: auto;
+    // max-height: 100vh;
+    // position: -webkit-sticky;
+    position: sticky;
+    // top:0rem;
+    // z-index: 1;
+    // overflow: hidden;
+}
+
+.side-nav{
+    list-style-type: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    &__item{
+        cursor: pointer;
+        position: relative;
+        &:not(:last-child){
+            margin-bottom: .5rem;
+        }
+
+        @include respond(tab-port){
+            margin-bottom: 1.75rem !important;
+        }
+        transition: transform .2s,
+        width .2s cubic-bezier(1,0,0,1) .2s,
+        background-color .1s; 
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 3px;
+            height: 100%;
+            transition: transform .2s,
+                        width .2s cubic-bezier(1,0,0,1) .2s,
+                        background-color .1s; 
+            // transform-origin: bottom;
+            background-color: var(--color-primary);
+            // z-index: -1;
+            transform: scaleY(0);
+            z-index: 0;
+        }
+
+        &:active::before {
+            background-color: var(--color-primary-dark);
+        }
+
+        // &:hover:before,
+        // &--active:before {
+        //     transform: scaleY(1);
+        //     width: 100%;
+        // }
+
+        &:hover:before{
+            transform: scaleY(1);
+            width: 100%;
+        }
+
+        &:hover {
+            transform: translateY(-.5rem);
+        }
+
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: var(--color-grey-light-1);
+        // color: var(--color-grey-dark-1);
+        display: flex;
+        align-items: center;
+        @include respond(tab-port){
+            span {
+                display: none;
+            }
+
+        }
+        padding: 1.5rem 3rem;
+
+        // z-index only works if we have defined position -- or specifically RELATIVE position
+        position: relative;
+        z-index: 1;
+    }
+
+    &__icon {
+        height: 1.75rem;
+        width: 1.75rem;
+        margin-right: 1.35rem;
+        fill: currentColor;
+
+        @include respond(tab-port){
+            // align-self: center;
+            height: 3.5rem;
+            width: 3.5rem;
+            margin: auto;
+            
+        }
+        // flex: 1;
+    }
+
+    & span {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+}
+
+.legal {
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    color: var(--color-grey-light-4);
+    text-align: center;
+}

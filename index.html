@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+        
+        <title>Vecto&mdash;All you need to trip</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="logo-box">
+                    <svg class="logo-box__icon">
+                        <use xlink:href="img/sprite.svg#icon-menu"></use>
+                    </svg>
+
+                    <!-- <img src="img/favicon-32x32.png" alt="img" class="logo-box__img"> -->
+
+                    <p class="logo-box__title">
+                        Vecto
+                    </p> 
+                </div>
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Search Trips">
+                    <button class="search__button">
+                        <svg class="search__icon">
+                            <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="user-nav">
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="user-nav__notification">7</span>
+                    </div>
+
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="user-nav__notification">5</span>
+                    </div>
+
+                    <div class="user-nav__user">
+                        <img src="img/user.jpg" alt="user photo" class="user-nav__user-photo">
+                        <span class="user-nav__user-name">Tolis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <nav class="sidebar">
+                    <ul class="side-nav">
+                        <li class="side-nav__item side-nav__item--active">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                                </svg>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-map"></use>
+                                </svg>
+                                <span>Journeys</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-user"></use>
+                                </svg>
+                                <span>Profiles</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav__item">
+                            <a href="#" class="side-nav__link">
+                                <svg class="side-nav__icon">
+                                    <use xlink:href="img/sprite.svg#icon-cog"></use>
+                                </svg>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <div class="legal">
+                        &copy; 2020 by Vecto. All rights reserved.
+                    </div>
+                </nav>
+                <div class="main">
+                    <div class="profiles-container">
+                        <!-- <h1 class="heading-primary heading-primary--sub">Connect With Anyone</h1> -->
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+
+                            <div class="profile__info-box">
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="profile">
+                            <figure class="profile__shape">
+                                <img src="img/user.jpg" alt="person on a tour" class="profile__img">
+                                <figcaption class="profile__caption"> Hire me, pls</figcaption>
+                            </figure>
+                            <div class="profile__info-box">
+                                
+                                <div class="profile__user-details">
+                                    <p class="profile__username">Tolis Boicotaz</p>
+                                    <p class="profile__jobs">Junior Developer at littlesmallplanet.mc</p>
+                                    <p class="profile__country">Greece</p>
+                                    <a href="#" class="btn btn--green btn--md profile__btn">View Profile</a>
+                                </div>
+
+                                <div class="skills">
+                                    <ul class="list">
+                                        <li class="item">HTML</li>
+                                        <li class="item">CSS</li>
+                                        <li class="item">JavaScript</li>
+                                        <li class="item">Node</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+
+                    </div>
+                </div>
+                <div class="right">
+                    right
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+
+<script type="text/javascript">
+    console.log('hi');
+    let status = "open";
+    $(".logo-box__icon").on("click", () => {
+        if (status == "open"){
+            $(".sidebar").css("flex", "0 1 0%");
+            // $(".sidebar").css("display", "hidden");
+            $(".sidebar").css("z-index", "-1");
+            status = "closed";
+        }
+        else {
+            $(".sidebar").css("flex", "0 1 12%");
+            $(".sidebar").css("z-index", "0");
+            status = "open";
+        }
+        
+    })
+
+
+</script>

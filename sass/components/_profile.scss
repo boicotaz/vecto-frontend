@@ -1,0 +1,133 @@
+.profile{
+    // flex: 1;
+    display: flex;
+    position: relative;
+    align-items: center;
+    // flex-wrap: wrap;
+    width: 70rem;
+    max-height: 23rem;
+
+    margin: 0 auto;
+    padding: 4rem;
+    // padding-bottom: rem;
+    background-color:  rgba(#fff,.85);
+    // background-color: f;
+    box-shadow: 0rem 3rem 6rem rgba(#000,0.30);
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    transform: skewX(-10deg);
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewX(-10deg) translateY(-.5rem);
+    }
+
+    & > * {
+        transform: skewX(10deg);
+    }
+
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+//
+    &__shape{
+        width: 12rem;
+        height: 12rem;
+        position: relative;
+        align-self: flex-start;
+        // float: left;
+        // flex: 0 0 18%;
+
+        // -webkit-shape-outside: circle(50% at 50% 50%);
+        // shape-outside: circle(50% at 50% 50%);
+        
+        -webkit-clip-path:circle(50% at 50% 50%);
+        clip-path:circle(50% at 50% 50%);
+
+        margin-right: 2rem;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &__img{
+        height: 100%;
+        // transition: all .2s;
+        transform: scale(1.2);
+        backface-visibility: hidden;
+        transition: all .2s;      
+    }
+
+
+    &__text{
+        font-weight: 400;
+    }
+
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__caption{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,0);
+        color:white;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        opacity: 0;
+        transition: all .2s;
+        // to solve the glitch in transition we need to add back face visibility
+        backface-visibility: hidden;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+
+    &:hover &__img{
+        -webkit-filter: blur(3px) brightness(80%);
+        filter:blur(3px) brightness(80%);
+        transform: scale(1);
+    }
+
+    &__info-box{
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    &__user-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        & > *:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+
+
+    }
+
+    &__username{
+        font-weight: 700;
+        font-size: 2rem;
+        color: black;
+    }
+
+    &__btn{
+        // position: absolute;
+        // right: -1rem;
+        // top: 7rem;
+        // align-self: flex-end;
+        // margin-right: 3rem;
+    }
+
+    &__jobs,&__country{
+        font-size: 1.4rem;
+    }
+}
