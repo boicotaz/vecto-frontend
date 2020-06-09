@@ -10,9 +10,18 @@
 
 .main {
     // background-color: azure;
-    flex: 1 0 76%;
-    background-image: linear-gradient(to right bottom,var(--color-primary-light) ,var(--color-primary-dark) );
-    // box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    flex: 1 0 70%;
+    // background-image: linear-gradient(to right bottom,var(--color-primary-light) ,var(--color-primary-dark) );
+    background-color: var(--color-grey-light-1);
+    // border-left: 1.5px solid grey;
+    // border-right: 1.5px solid grey;
+
+    // box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    border-right: .5px solid #ccc;
+    border-left: .5px solid #ccc;
+
+    // box-shadow: 1px -16px 57px -20px rgba(255,255,255,.6);
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
     // background-color: var(--color-grey-dark-1);
     // overflow-y: auto;
     // height: 95rem;
@@ -21,28 +30,40 @@
     // height: 95rem;
     // padding-bottom: 1rem;
     // min-height: 110rem;
+    z-index: 2;
+
 }
 .right{
     // box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    background-color: blue;
-    flex: 0 0 12%;
-    border-left: var(--darker-line);
+    // background-color: green;
+    // background-color: var(--color-grey-dark-1);
+    background-color: white;
+
+    flex: 0 0 15%;
+    // border-left: var(--darker-line);
 }
 
 
 .profiles-container{
     margin: 0 auto;
     margin-top: 3rem;
-    width: 70%;
+    width: 100%;
     // z-index: 1;
     // text-align: right;
     // background-color: black;
     display: flex;
-    flex-direction: column;
-    // min-height: 100rem;
-    // height: 200rem;
-    // height : 70rem;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     // min-height: 80vh;
     // height: 100rem;
-    // overflow-y: scroll;
+    // overflow-y: scroll;);
+}
+.profiles-header{
+    height: 10rem;
+    background-color: var(--color-grey-light-2);
+    border-bottom: var(--line);
+    position: relative;
 }

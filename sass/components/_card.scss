@@ -1,0 +1,335 @@
+.card{
+    // must be defined in the parent element where rotate occurs.
+    // make the rotatin look like it is popping out of the screen
+    perspective: 150rem;
+    -webkit-perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    
+    // margin-top: 30rem;
+    flex: 0 0 27%;
+    // flex: 1;
+    // width: 30%;
+    height: 50rem;
+    text-align: center;
+    // margin-bottom: 5rem;
+    margin: 0 auto;
+    // margin-right: 5rem;
+    // margin: auto auto;
+    // margin-left: auto;
+    margin-bottom: 5rem;
+
+    &__side {
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 1rem;
+        // since the image of the child element is too big, we need the overflow property to hidden to retain the border properties
+        overflow: hidden;
+        box-shadow: 0rem 1.5rem 4rem rgba(0,0,0,0.15);
+
+        &--front{
+            background-color: $color-white;
+        }
+
+        &--back{
+            // background-color: green;
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom,var(--color-grey-dark-1) ,var(--color-grey-dark-1));
+            }
+
+            &-2{
+                background-image: linear-gradient(to right bottom,$color-primary-light ,$color-primary-dark);
+            }
+
+            &-3{
+                background-image: linear-gradient(to right bottom,$color-tertiary-light ,$color-tertiary-dark);
+            }
+        }
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0);
+    }
+
+    &__picture{
+        background-size: cover;
+        height: 48%;
+        background-blend-mode: screen;
+        
+        -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background-image: linear-gradient(to right bottom,var(--color-grey-dark-1) ,var(--color-grey-dark-1));
+        }
+
+        &--2{
+            background-image:linear-gradient(to right bottom,$color-primary-light ,$color-primary-dark), url(../img/nat-6.jpg);
+        }
+
+        &--3{
+            background-image:linear-gradient(to right bottom,$color-tertiary-light ,$color-tertiary-dark), url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading{
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        font-weight: 400;
+        color: $color-white;
+        text-align: right;
+        position: absolute;
+        top:15rem;
+        right: 2rem;
+        width: 60%;
+    }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &--1{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-grey-dark-3,.85),
+            rgba($color-grey-dark-2,.85) );
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary-light,.85),
+            rgba($color-primary-dark,.85) );
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary-light,.85),
+            rgba($color-tertiary-dark,.85) );
+        }
+    }
+
+    &__details{
+        position: relative;
+        height: 52%;
+        ul {
+            font-size: 1.3rem;
+            font-weight: 700;
+            list-style: none;
+            width: 80%;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+
+            li {
+                
+                text-align: center;
+                padding-bottom: 1rem;
+
+
+                &:not(:first-child){
+                    margin-top: 1rem;
+                }
+
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    &__cta{
+        position: absolute;
+        height: 60%;
+        width: 80%;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+        &__price-box {
+            text-transform: uppercase;
+            color: $color-white;
+            margin-bottom: 12rem;
+
+            p {
+                &:first-child{
+                    font-size:1.5rem;
+                    font-weight: 700;
+                }
+
+                &:last-child{
+                    font-size:6rem;
+                    font-weight: 270;
+                }
+    
+            }
+        }
+
+    }
+
+
+
+    @include respond(tab-port){
+
+        position: relative;
+        height: 60rem;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0rem 1.5rem 4rem rgba(0,0,0,0.15);
+        border-radius: 1rem;
+    
+        &__side {
+            transition: all .8s ease;
+            position: relative;
+            width: 100%;
+            // backface-visibility: hidden;
+            // since the image of the child element is too big, we need the overflow property to hidden to retain the border properties
+            overflow: hidden;
+            
+            box-shadow: 0 0 0;
+            &--front{
+                background-color: $color-white;
+                height: 65%;
+
+            }
+    
+            &--back{
+                // background-color: green;
+                height:35%;
+                transform: rotateY(0);
+                
+                // padding-top: 2rem;
+                border-radius: 0 0 1rem 1rem;
+                -webkit-clip-path:polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                clip-path:polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    
+                &-1{
+                    background-image: linear-gradient(to right bottom,$color-secondary-light ,$color-secondary-dark);
+                }
+    
+                &-2{
+                    background-image: linear-gradient(to right bottom,$color-primary-light ,$color-primary-dark);
+                }
+    
+                &-3{
+                    background-image: linear-gradient(to right bottom,$color-tertiary-light ,$color-tertiary-dark);
+                }
+            }
+        }
+
+        &__heading{
+            text-transform: uppercase;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: $color-white;
+            text-align: right;
+            position: absolute;
+            top:29%;
+            right: 5%;
+            width: 60%;
+        }
+        &__picture{
+            height: 52%
+        }
+        &__details {
+            // margin: rem auto;
+            top: .5rem;
+            height: 48%;
+            overflow: visible;
+            ul {
+                width: 70%;
+                // top: 45%;
+                margin-bottom: 1rem;
+                
+                li {
+                    padding-bottom: 0rem;
+                }
+                // padding-bottom: 3rem;
+            }
+            // height: 60%;
+        }
+    
+        &:hover &__side--front{
+            transform: rotateY(0);
+        }
+    
+        &:hover &__side--back{
+            transform: rotateY(0);
+        }
+    
+        &__picture{
+            background-size: cover;
+            height: 48%;
+            background-blend-mode: screen;
+            
+            -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    
+       
+    
+        &__cta{
+            position: absolute;
+            height: 60%;
+            width: 80%;
+            left: 50%;
+            top:35%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            margin-top: 2rem;
+            &__price-box {
+                text-transform: uppercase;
+                color: $color-white;
+                margin-bottom: .5rem;
+    
+                p {
+                    &:first-child{
+                        font-size:1.1rem;
+                        font-weight: 700;
+    
+                    }
+    
+                    &:last-child{
+                        font-size:4.5rem;
+                        font-weight: 270;
+                    }
+        
+                }
+            }
+
+        }
+    }
+    &__photo {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        height: 9rem;
+        border-radius: 50%;
+        box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+        transition: all .3s;
+        border: 1px solid grey;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 2.3rem;
+        font-weight: 400;
+        color: $color-white;
+        text-align: right;
+        position: absolute;
+        top:3rem;
+        right: 2rem;
+        width: 60%;
+    }
+
+}
