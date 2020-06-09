@@ -67,7 +67,7 @@ body {
   .heading-primary--sub {
     display: block;
     font-weight: 700;
-    color: var(--color-grey-dark-1);
+    color: var(--color-grey-dark-2);
     font: inherit;
     font-size: 3rem;
     position: absolute;
@@ -424,8 +424,7 @@ body {
     height: 9rem;
     border-radius: 50%;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
-    transition: all .3s;
-    border: 1px solid grey; }
+    transition: all .3s; }
   .card__name {
     text-transform: uppercase;
     font-size: 2.3rem;
@@ -447,6 +446,8 @@ body {
   background-color: var(--color-grey-light-2);
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
   /* box-shadow: 0px 14px 5px 0px rgba(0,0,0,0.75); */
+  position: sticky;
+  top: 0rem;
   z-index: 3; }
 
 .logo-box {
@@ -600,21 +601,29 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: #fff;
   flex: 0 0 15%;
   transition: all .1s;
   width: 0;
   overflow: auto;
-  position: sticky;
+  position: relative;
   color: var(--color-grey-dark-2); }
+
+.side-nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  width: 15%; }
 
 .side-nav {
   list-style-type: none;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  color: currentColor; }
+  color: currentColor;
+  flex: 1; }
   .side-nav__item {
     color: currentColor;
     cursor: pointer;
@@ -673,6 +682,7 @@ body {
 .legal {
   font-size: 1.2rem;
   padding: 2.5rem;
+  padding-left: 0;
   color: var(--color-grey-light-4);
   text-align: center; }
 
@@ -695,7 +705,7 @@ body {
 
 .profiles-container {
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 8rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -705,6 +715,6 @@ body {
 
 .profiles-header {
   height: 10rem;
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-3);
   border-bottom: var(--line);
   position: relative; }

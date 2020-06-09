@@ -1,7 +1,7 @@
 .sidebar{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     // background-color: var(--color-grey-dark-1);
     background-color: #fff;
     flex: 0 0 15%;
@@ -10,19 +10,29 @@
     overflow: auto;
     // max-height: 100vh;
     // position: -webkit-sticky;
-    position: sticky;
+    position: relative;
     // top:0rem;
     // z-index: 1;
     // overflow: hidden;
     color: var(--color-grey-dark-2);
 }
-
+.side-nav__container{
+    display: flex;
+    flex-direction: column;
+    // align-items: flex-start;
+    justify-content: space-between;
+    // background-color: red;
+    position: fixed;
+    // left: 0rem;
+    width: 15%;
+}
 .side-nav{
     list-style-type: none;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     color: currentColor;
+    flex: 1;
     // align-items: center;
 
     &__item{
@@ -130,6 +140,7 @@
 .legal {
     font-size: 1.2rem;
     padding: 2.5rem;
+    padding-left: 0;
     color: var(--color-grey-light-4);
     text-align: center;
 }
